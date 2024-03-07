@@ -1,0 +1,14 @@
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.AssemblyInfoInputs.cache
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.AssemblyInfo.cs
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.csproj.CoreCompileInputs.cache
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\bin\Debug\net7.0\SistemaJogos.exe
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\bin\Debug\net7.0\SistemaJogos.deps.json
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\bin\Debug\net7.0\SistemaJogos.runtimeconfig.json
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\bin\Debug\net7.0\SistemaJogos.dll
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\bin\Debug\net7.0\SistemaJogos.pdb
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.dll
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\refint\SistemaJogos.dll
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.pdb
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\SistemaJogos.genruntimeconfig.cache
+C:\Users\conap\OneDrive\Área de Trabalho\André\Alura\SistemaJogos\SistemaJogos\obj\Debug\net7.0\ref\SistemaJogos.dll
