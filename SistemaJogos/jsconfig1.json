@@ -3,13 +3,21 @@
     "Data": "22/09/1997",
     "Estadio": "Allianz Parque",
     "PartidaTimes": "Palmeiras x Corinthians",
-    "Placar": "2x1"
+    "Placar": "2x1",
+    "TimeMandante":"Palmeiras",
+    "TimeVisitante":"Corinthians",
+    "GolsTimeMandante": 2,
+    "GolsTimeVisitante": 1
   },
   {
     "Data": "06/03/2024",
     "Estadio": "Pacaembu",
     "PartidaTimes": "Palmeiras x São Paulo",
-    "Placar": "4x0"
+    "Placar": "4x0",
+    "TimeMandante": "Palmeiras",
+    "TimeVisitante": "São paulo",
+    "GolsTimeMandante": 4,
+    "GolsTimeVisitante": 0
   }
 
 ]

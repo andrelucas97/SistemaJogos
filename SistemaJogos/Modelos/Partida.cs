@@ -4,21 +4,21 @@ namespace SistemaJogos.Modelos
 {
     public class Partida
     {
-        public DateTime Data { get; set; }
+        public string Data { get; set; }
         public string Estadio { get; set; }
         public string PartidaTimes { get; set; }
         public string Placar { get; set; }
-        public string TimeMandante { get; set; }
-        public string TimeVisitante { get; set; }
-        public int GolsTimeMandante { get; set; }
-        public int GolsTimeVisitante { get; set; }
+        public string? TimeMandante { get; set; }
+        public string? TimeVisitante { get; set; }
+        public int? GolsTimeMandante { get; set; }
+        public int? GolsTimeVisitante { get; set; }
 
         public Partida()
         {
 
         }
 
-        public Partida(DateTime data, string estadio, string partidaTimes, string placar)
+        public Partida(string data, string estadio, string partidaTimes, string placar)
         {          
 
             string[] time = partidaTimes.Split('x');
@@ -32,6 +32,8 @@ namespace SistemaJogos.Modelos
             List<string> golsTimeMandanteLista = new List<string>();
             List<string> golsTimeVisitanteLista = new List<string>();
 
+            PlacarMandanteVisitante(timeMandante, timeVisitante, golsTimeMandante, golsTimeVisitante, golsTimeMandanteLista, golsTimeVisitanteLista);
+
             Data = data;
             Estadio = estadio;
             PartidaTimes = partidaTimes;
@@ -41,7 +43,6 @@ namespace SistemaJogos.Modelos
             GolsTimeMandante = golsTimeMandante;
             GolsTimeVisitante = golsTimeVisitante;
 
-            PlacarMandanteVisitante(timeMandante, timeVisitante, golsTimeMandante, golsTimeVisitante, golsTimeMandanteLista, golsTimeVisitanteLista);
         }
 
         public void PlacarMandanteVisitante(string timeMandante, string timeVisitante, int golsTimeMandante, int golsTimeVisitante, List<string> golsTimeMandanteLista, List<string> golsTimeVisitanteLista)
@@ -69,7 +70,7 @@ namespace SistemaJogos.Modelos
             int count = 1;
             foreach (Partida partidaItem in partida)
             {
-                Console.WriteLine($"Partida {count}: {partidaItem.Data.ToString("dd/MM/yyyy")} ({partidaItem.Estadio}) {partidaItem.TimeMandante} {partidaItem.GolsTimeMandante} x {partidaItem.GolsTimeVisitante} {partidaItem.TimeVisitante} ");
+                Console.WriteLine($"Partida {count}: {partidaItem.Data} ({partidaItem.Estadio}) {partidaItem.TimeMandante} {partidaItem.GolsTimeMandante} x {partidaItem.GolsTimeVisitante} {partidaItem.TimeVisitante} ");
                 Console.WriteLine($"Time Mandante: {partidaItem.TimeMandante}");
                 Console.WriteLine($"Time Visitante: {partidaItem.TimeVisitante}");
                 count++;

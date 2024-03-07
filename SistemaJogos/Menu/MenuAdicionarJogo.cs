@@ -10,7 +10,7 @@ namespace SistemaJogos.Menu
             ExibirTitulosOpcao("Adicionando o placar do jogo");
             Console.Write("Data do jogo (Ex.: 22/09/1997): ");
             string dataJogo = Console.ReadLine()!;
-            DateTime data = Convert.ToDateTime(dataJogo);
+            string data = dataJogo;
 
             Console.Write("\nLocal da partida: ");
             string localPartida = Console.ReadLine()!;
