@@ -1,9 +1,13 @@
 ﻿using SistemaJogos.Modelos;
+using System.Text.Json;
 
 namespace SistemaJogos.Menu
 {
+
     internal class MenuAdicionarJogo : Menu
     {
+        public List<Partida>? PartidaJogos { get; }
+
         public override void Executar(List<Partida> partidaList, List<Perfil> perfil)
         {
             base.Executar(partidaList, perfil);
@@ -20,17 +24,18 @@ namespace SistemaJogos.Menu
 
             Console.Write("\nPlacar do jogo (Ex.: 2x1): ");
             string placar = Console.ReadLine()!;
-
-            
+                        
             Partida partidaAtual = new Partida(data, localPartida, partida, placar);
             partidaList.Add(partidaAtual);
 
-            Console.Write("\nPartida cadastrada com sucesso!");
+            //Console.Write("\nPartida cadastrada com sucesso!");
+            partidaAtual.AdicionarArquivoJson(partidaAtual);
             Thread.Sleep(3000);
             Console.Write("\nDigite uma tecla para voltar ao menu principal!");
             Console.ReadKey();
             Console.Clear();
-        }
+        }        
+
         public static List<MenuAdicionarJogo> PlacarMandanteVisitante(string timeMandante, string timeVisitante, int golsTimeMandante, int golsTimeVisitante)
         {
             List<MenuAdicionarJogo> timesVisitantes = new List<MenuAdicionarJogo>();            

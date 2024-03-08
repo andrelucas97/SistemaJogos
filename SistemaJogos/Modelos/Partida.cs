@@ -1,4 +1,5 @@
 ﻿using SistemaJogos.Menu;
+using System.Text.Json;
 
 namespace SistemaJogos.Modelos
 {
@@ -12,7 +13,7 @@ namespace SistemaJogos.Modelos
         public string? TimeVisitante { get; set; }
         public int? GolsTimeMandante { get; set; }
         public int? GolsTimeVisitante { get; set; }
-
+        public static List<Partida>? PartidaJogos { get; }
         public Partida()
         {
 
@@ -78,5 +79,51 @@ namespace SistemaJogos.Modelos
             return partidas;
         }
 
+        internal void AdicionarArquivoJson(Partida partidaAtual)
+        {
+            string arquivoJogos = $"jogos-presente.json";
+            List<Partida> partidaList = new List<Partida>();
+
+            try
+            {
+                if (File.Exists(arquivoJogos))
+                {
+                    string json = File.ReadAllText(arquivoJogos);
+                    // ERRO AQUI
+                    partidaList = JsonSerializer.Deserialize<List<Partida>>(json)!;
+                }
+                else
+                {
+                    string json = JsonSerializer.Serialize(new
+                    {
+                        data = Data,
+                        estadio = Estadio,
+                        partidaTimes = PartidaTimes,
+                        placar = Placar,
+                        timeMandante = TimeMandante,
+                        timeVisitante = TimeVisitante,
+                        golsTimeMandante = GolsTimeMandante,
+                        golsTimeVisitante = GolsTimeVisitante
+
+                    });
+
+                    string arquivoJogo = $"jogos-presente.json";
+
+                    File.WriteAllText(arquivoJogo, json);
+                    Console.WriteLine($"Arquivo Json criado com sucesso! {Path.GetFullPath(arquivoJogo)}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro ao desserializar o JSON: {ex.Message}");
+            }
+            
+
+            partidaList.AddRange(PartidaJogos!);
+
+            string novoJson = JsonSerializer.Serialize(partidaList);
+            File.WriteAllText(arquivoJogos, novoJson);
+            Console.WriteLine($"Jogo atualizado com sucesso!! {Path.GetFullPath(arquivoJogos)}");
+        }
     }
 }
